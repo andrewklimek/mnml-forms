@@ -142,6 +142,7 @@ add_action( 'rest_api_init', function ()
 	register_rest_route( 'mnmlforms/v1', '/post', array(
 		'methods' => 'POST',
 		'callback' => 'ajk_mnmlforms_process',
+		'permission_callback' => '__return_true',
 	) );
 } );
 
